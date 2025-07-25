@@ -13,11 +13,9 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "npx @smithery/cli build",
-		"dev": "npx @smithery/cli dev",
-		"check": "npx @biomejs/biome check --write --unsafe",
+		"build": "tsc",
 		"start": "node dist/cli.js",
-		"compile": "tsc"
+		"prepare": "npm run build"
 	},
 	"dependencies": {
 		"@modelcontextprotocol/sdk": "^1.11.0",
