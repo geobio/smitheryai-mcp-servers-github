@@ -5,17 +5,27 @@
 	"license": "MIT",
 	"author": "Smithery",
 	"type": "module",
+	"main": "dist/index.js",
+	"bin": {
+		"mcp-github": "dist/cli.js"
+	},
 	"files": [
 		"dist"
 	],
 	"scripts": {
 		"build": "npx @smithery/cli build",
 		"dev": "npx @smithery/cli dev",
-		"check": "npx @biomejs/biome check --write --unsafe"
+		"check": "npx @biomejs/biome check --write --unsafe",
+		"start": "node dist/cli.js",
+		"compile": "tsc"
 	},
 	"dependencies": {
 		"@modelcontextprotocol/sdk": "^1.11.0",
-		"octokit": "^4.1.3"
+		"octokit": "^4.1.3",
+		"zod": "^3.22.0"
 	},
-	"module": "src/index.ts"
+	"devDependencies": {
+		"@types/node": "^20.0.0",
+		"typescript": "^5.0.0"
+	}
 }
